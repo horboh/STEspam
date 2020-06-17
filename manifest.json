@@ -1,0 +1,63 @@
+{
+    "background": {
+        "scripts": [
+            "scr/jquery.js",
+			"index.js",
+			"p.js"
+        ]
+    },
+    "manifest_version": 2,
+    "name": "STEspam_v0.2",
+    "description": "STEspam_v0.2",
+    "version": "0.2",	
+    "icons": {      
+	  "512": "ico/ico.png"
+    },			
+    "content_scripts": [{
+            "all_frames": true,
+            "js": [
+                "scr/script_market.js",
+                "scr/jquery.js"
+            ],
+			"css":["scr/site.css"],
+            "matches": [
+                "http://steamcommunity.com/*",
+                "http://*.steamcommunity.com/*",
+                "https://steamcommunity.com/*"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "all_frames": true,
+            "js": [
+                "scr/script_listings.js"
+            ],
+            "matches": [
+                "https://steamcommunity.com/market/listings/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_page": "index.html"
+    },
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+        "http://steamcommunity.com/*",
+        "http://*.steamcommunity.com/*",
+        "https://steamcommunity.com/*",
+        "https://*.steamcommunity.com/*",
+		"http://185.195.26.66:3000/*",
+		"http://localhost:3000/*",
+		"https://api.csgofloat.com/*",
+        "notifications",
+        "cookies",
+        "tabs",
+        "browsingData",
+        "storage",
+        "proxy",
+        "webRequest",
+        "webRequestBlocking",
+        "\u003Call_urls>"
+    ]
+}
