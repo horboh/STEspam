@@ -47,7 +47,7 @@
         "http://*.steamcommunity.com/*",
         "https://steamcommunity.com/*",
         "https://*.steamcommunity.com/*",
-		"http://185.195.26.66:3000/*",
+		"http://147.78.66.204:3000/*",
 		"http://localhost:3000/*",
 		"https://api.csgofloat.com/*",
         "notifications",
