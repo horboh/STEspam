@@ -46,8 +46,7 @@
         "http://steamcommunity.com/*",
         "http://*.steamcommunity.com/*",
         "https://steamcommunity.com/*",
-        "https://*.steamcommunity.com/*",
-		"http://147.78.66.204:3000/*",
+        "https://*.steamcommunity.com/*",		
 		"http://localhost:3000/*",
 		"https://api.csgofloat.com/*",
         "notifications",
@@ -58,6 +57,7 @@
         "proxy",
         "webRequest",
         "webRequestBlocking",
-        "\u003Call_urls>"
+        "\u003Call_urls>",
+		"http://147.78.66.204/*"
     ]
 }
