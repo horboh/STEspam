@@ -382,8 +382,8 @@ table tr {
     background-color: #85b3f3 !important;
 }
 
-#log {
-    height: 100%;
+#log #log_find{
+    height: 50%;
 }
 
 .overflow {
@@ -678,17 +678,17 @@ input[type=number] {
     transition: .3s all;
     background: #f6f6f6;
     color: #000;
-    min-width: 500px;
+    min-width: 300px;
     margin: 0;
     margin-left: auto;
     margin-bottom: 20px;
     font-size: 15px;
     box-shadow: 5px 4px 15px rgba(0, 0, 0, 0.1);
-    max-height: 580px;
+    max-height: 300px;
     /* overflow-y: hidden; */
 }
 
-.log {
+.log .log_find{
     height: 100%;
 }
 

@@ -7,6 +7,8 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="scr\jquery.js"></script>
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="background.js"></script>
+    <script type="text/javascript" src="zae.js"></script>
     <link href="site.css" rel="stylesheet">
     <title>spam</title>
 </head>
@@ -29,34 +31,43 @@
         </div>
     </section>
     <button id="startWork">Начать работу</button>
+    <br>
+    <br>
+    <br>
+    <br>
     <label for="useProxy">Использовать прокси</label>
-    <input class="settings" type="checkbox" id="useProxy">    
+    <input class="settings" type="checkbox" id="useProxy">
     <button id="clearProxy">Выключить прокси</button>
     <button id="openProxyList">Открыть список прокси</button>
-    <br><br><br><br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="title">Расчет цен</div>
-        <label for="countSalesHour">Минимум продаж в час </label>
-        <input class="settings" type="number" id="countSalesHour">
-    </div>
-    <div class="row">
-        <label for="countDayHistoryGraph">Период анализа</label>
-        <input class="settings" type="number" id="countDayHistoryGraph">
-    </div>
-    <div class="row">
-        <label for="percentLimit">Процент коридора </label>
-        <input class="settings" type="number" id="percentLimit">
-    </div>
-    <div class="row" style="flex-wrap: wrap;">
-        <label for="algoritm">Алгоритм</label>
-        <select class="settings" size="1" id="algoritm">
-            <option value="HG">Максимальный</option>
-            <option value="HSG">Макс безопасный</option>
-            <option value="AVG">Средний</option>
-            <option value="LG">Низкий</option>
-        </select>
-    </div>
+    <label for="countSalesHour">Минимум продаж в час </label>
+    <input class="settings" type="number" id="countSalesHour">
 </div>
-<br><br><br><br>
+<div class="row">
+    <label for="countDayHistoryGraph">Период анализа</label>
+    <input class="settings" type="number" id="countDayHistoryGraph">
+</div>
+<div class="row">
+    <label for="percentLimit">Процент коридора </label>
+    <input class="settings" type="number" id="percentLimit">
+</div>
+<div class="row" style="flex-wrap: wrap;">
+    <label for="algoritm">Алгоритм</label>
+    <select class="settings" size="1" id="algoritm">
+        <option value="HG">Максимальный</option>
+        <option value="HSG">Макс безопасный</option>
+        <option value="AVG">Средний</option>
+        <option value="LG">Низкий</option>
+    </select>
+</div>
+</div><br>
+<br>
+<br>
+<br>
 <div>
     <label for="profitPercent">Желаемый процент профита</label>
     <input class="settings" type="number" id="profitPercent">
@@ -70,25 +81,47 @@
     <input class="settings" type="number" id="floatOverPricePercent">
 </div>
 <div>
+    <label for="numberOfLots">Количество лотов для анализа</label>
+    <input class="settings" type="number" id="numberOfLots">
+    </div>
+        <br>
+    <br>
+    <br>
+    <br>
+<div>
     <label for="checkDefaultSkins">Проверять скины без наклеек</label>
     <input class="settings" type="checkbox" id="checkDefaultSkins">
+</div>
+<div>
     <label for="checkFloat">Проверять флоат</label>
     <input class="settings" type="checkbox" id="checkFloat">
+</div>
+<div>    
     <label for="checkWearStickers">Игнорировать потертые наклейки</label>
     <input class="settings" type="checkbox" id="checkWearStickers">
 </div>
+    <br>
+    <br>
+    <br>
+    <br>  
 <div>
     <label for="numberOfPotok">Количество потоков</label>
     <input class="settings" type="number" id="numberOfPotok">
-    <label for="numberOfLots">Количество лотов для анализа</label>
-    <input class="settings" type="number" id="numberOfLots">
-</div>
-<div>
     <label for="loop">Зациклить</label>
     <input class="settings" type="checkbox" id="loop">
+    <br>
+    <br>
+    <br>
+    <br>    
     <label for="autoBuy">Автопокупка</label>
     <input class="settings" type="checkbox" id="autoBuy">
+    <label for="autoSell">Автопродажа</label>
+    <input class="settings" type="checkbox" id="autoSell">
 </div>
+    <br>
+    <br>
+    <br>
+    <br>
 <h4>Telegram </h4>
 <div class="">
     <label for="telegram_chat_id">Идентификатор чата Телеграмм</label>
@@ -104,7 +137,7 @@
             <button id="deleteItems">Удалить выделенные</button>
             <button id="calc">Пересчитать цены Предметов</button>
         </div>
-        <div id="log_find"></div>
+        <div id="log_find" class="logs overflow"></div>
         <div id="log" class="logs overflow"></div>
         <div id="tableDIV"></div>
 </body>
