@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+#wrapper {
+  position: relative;
+  min-height: calc(100vh - 90px);
+}
+header {
+  background: #6e6e6e;
+}
+header .row {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+header .slogan {
+  color: #e8e8e8;
+  font-size: 16px;
+}
+header .socials {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+header .socials li {
+  position: relative;
+}
+header .socials li:first-child {
+  margin-right: 10px;
+}
+header .socials li a {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+header .socials .vk {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(/ico/vk-logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+}
+header .socials .yt {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(/ico/youtube.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .user_avatar {
+  width: 40px;
+  height: 40px;
+  content: '';
+  background-size: cover;
+  margin-right: 15px;
+}
+header .user_block {
+  display: flex;
+  align-items: center;
+  width: 88%;
+  justify-content: flex-end;
+}
+header .user_block_text {
+  display: flex;
+  flex-direction: column;
+}
+header .user_name {
+  font-weight: bold;
+}
+header .menu_bttn_wrapper {
+  padding: 15px 8px;
+  cursor: pointer;
+  background-color: #fbfbfc85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  border-radius: 2px;
+  transition: 0.3s all;
+}
+header .menu_bttn_wrapper:hover {
+  opacity: 0.5;
+}
+header .menu_bttn_wrapper .menu_bttn {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  display: block;
+  width: 40px;
+  height: 18px;
+  background-color: unset;
+  z-index: 12;
+  padding: 0;
+}
+#settings-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  z-index: 5;
+  display: none;
+  padding: 30px 0;
+}
+#settings-block.open-menu {
+  display: block;
+}
+#settings-block .setting-item {
+  margin: 3px;
+  width: 30%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 2px 5px 18px rgba(122, 122, 122, 0.15);
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 4px;
+}
+#settings-block .sett-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+#settings-block .sett-row label {
+  margin-bottom: 0;
+  color: #fff;
+}
+#settings-block .sett-row input {
+  text-align: center;
+  border-radius: 4px;
+  padding: 3px;
+  font-size: 80%;
+  border: 0.5px solid #d9d9d9;
+  background-color: #fff;
+  -moz-appearance: textfield;
+}
+#settings-block .sett-row input[type='number'] {
+  -moz-appearance: textfield;
+  width: 60px;
+  max-width: 60px;
+}
+#settings-block .sett-row input input::-webkit-outer-spin-button,
+#settings-block .sett-row input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+table tr {
+  border: 1px solid #00000030;
+  transition: background-color 0.2s ease-in-out;
+}
+.tab {
+  width: 70%;
+}
+.tab tr {
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.tab tr:nth-child(odd) {
+  background-color: rgba(7, 8, 10, 0.12);
+}
+.tab tr:nth-child(odd):hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tab tr:nth-child(even) {
+  background-color: #fff;
+}
+.tab tr:nth-child(even) :hover {
+  background-color: rgba(206, 206, 206, 0.3);
+}
+.tab tr th {
+  cursor: pointer;
+}
+.tab tr .tr-color {
+  background-color: #85b3f3 !important;
+}
+#main #startWork,#enterSecrteKey {
+  width: 150px;
+  margin: 0;
+  border: none;
+  border-right: 80%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #008e2c;
+  color: #fff;
+  padding: 10px;
+  transition: 0.3s all;
+  background: linear-gradient(#25e818, #48942f) #2bb735;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(65, 125, 41, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+  font-weight: 600;
+}
+
+#main #startWork.working {
+  background: red;
+}
+
+#main .row {
+  margin-bottom: 20px;
+}
+progress {
+  height: 40px;
+  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+progress:before {
+  content: attr(data-label);
+  font-size: 0.8em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.log-wrapper {
+  position: absolute;
+  top: 10px;
+  width: 30%;
+  height: 150px;
+  right: 0;
+  background: gray;
+  padding: 35px 10px 10px 10px;
+}
+.log-wrapper.hide {
+  width: 5%;
+}
+.log-wrapper.hide #log {
+  display: none;
+}
+.log-wrapper #log {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  background: #414141;
+  color: #fff;
+}
+.log-wrapper .log-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #afafaf;
+  color: #fff;
+}
+.log-wrapper .log-control .hide-log {
+  padding: 0 8px;
+  background: red;
+  color: #fff;
+  cursor: pointer;
+}
+.log_find_wrapper {
+  height: 300px;
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: grey;
+}
+.log_find_wrapper .msg {
+  border-top: 1px solid white;
+}
+.log_find_wrapper #log_find {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  background: #414141;
+  color: #fff;
+}
+button {
+  border-radius: 4px;
+  border: none;
+  padding: 5px 10px;
+  background: #216bc6;
+  color: #fff;
+  transition: 0.3s all;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
+}
+button:hover {
+  background: #0d458a;
+}
+
+div.sell_msg {
+    background-color: #269c26;
+}
+
+/*# sourceMappingURL=global.css.map */

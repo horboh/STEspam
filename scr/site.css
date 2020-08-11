@@ -51,3 +51,7 @@
 # .button_add_item_grey:hover {
     background: 2e343a;
 }
+
+div.sell_msg {
+    background-color: #8deb8d;
+}

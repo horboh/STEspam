@@ -2,142 +2,232 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-    <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="scr/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
-    <script type="text/javascript" src="scr\jquery.js"></script>
+    <link rel="stylesheet" href="scr/global.css">
+    <script type="text/javascript" src="scr/jquery.js"></script>
+    <script src="scr/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="background.js"></script>
     <script type="text/javascript" src="zae.js"></script>
-    <link href="site.css" rel="stylesheet">
     <title>spam</title>
 </head>
 <body>
-    <section hidden class="proxySettings" id="proxyListSection">
-        <div class="b-popup-inner">
-            <div class="b-popup-settings">
-                <div class="set_group">
-                    <div class="title">Список прокси</div>
-                    <div class="row">
-                        <textarea name="proxyList" id="proxyList" cols="100" rows="10"></textarea>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="menu_bttn_wrapper col-auto">
+                    <div class="menu_bttn"></div>
+                </div>
+                <a class="logo col">
+                    <img src="/ico/ste_white.png" alt="">STEspam
+                </a>
+                <div class="user_block col">
+                    <div class="user_avatar" id="user_avatar"></div>
+                    <div class="user_block_text">
+                        <div class="user_name" id="user_name"></div>
+                        <div class="user_balance" id="balance"></div>
+                        <div class="user_on_sale" id="on_sale_sum"></div>
+                        <div class="user_on_buy" id="orders_sum"></div>
                     </div>
-                    <div>
-                        <button id="proxyList_clear" class="">Очистить</button>
-                        <button id="proxyList_close" class="">Закрыть</button>
-                        <button id="proxyList_test" class="">Тест всех прокси</button>
+                </div>
+                <ul class="socials col-auto">
+                    <li class="vk">
+                        <a target="_blank" href="https://vk.com/steamtradeextensionz"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="wrapper">
+        <section id="settings-block">
+            <div class="container">
+                <div class="row">
+                    <section hidden class="proxySettings" id="proxyListSection">
+                        <div class="b-popup-inner">
+                            <div class="b-popup-settings">
+                                <div class="set_group">
+                                    <div class="title">Список прокси</div>
+                                    <div class="row">
+                                        <textarea name="proxyList" id="proxyList" cols="100" rows="10"></textarea>
+                                    </div>
+                                    <div>
+                                        <button id="proxyList_close" class="">Закрыть</button>
+                                        <button id="proxyList_clear" class="">Очистить</button>
+                                        <button id="proxyList_test" class="">Тест всех прокси</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section hidden class="proxySettings" id="stickersFilter">
+                        <div class="b-popup-inner">
+                            <div class="b-popup-settings">
+                                <div class="set_group">
+                                    <div class="title">Список наклеек</div>
+                                    <div class="row">
+                                        <textarea name="srickersList" id="srickersList" cols="100" rows="10"></textarea>
+                                    </div>
+                                    <div>
+                                        <button id="srickersList_close" class="">Закрыть</button>
+                                        <button id="srickersList_clear" class="">Очистить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="useProxy">Использовать прокси</label>
+                            <input class="settings" type="checkbox" id="useProxy">
+                        </div>
+                        <div class="sett-row">
+                            <button id="clearProxy">Выключить прокси</button>
+                            <button id="openProxyList">Открыть список прокси</button>
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="title">Расчет цен</div>
+                        <div class="sett-row">
+                            <label for="countSalesHour">Минимум продаж в час </label>
+                            <input class="settings" type="number" id="countSalesHour">
+                        </div>
+                        <div class="sett-row">
+                            <label for="countDayHistoryGraph">Период анализа</label>
+                            <input class="settings" type="number" id="countDayHistoryGraph">
+                        </div>
+                        <div class="sett-row">
+                            <label for="percentLimit">Процент коридора </label>
+                            <input class="settings" type="number" id="percentLimit">
+                        </div>
+                        <div class="sett-row">
+                            <label for="algoritm">Алгоритм</label>
+                            <select class="settings" size="1" id="algoritm">
+                                <option value="HG">Максимальный</option>
+                                <option value="HSG">Макс безопасный</option>
+                                <option value="AVG">Средний</option>
+                                <option value="LG">Низкий</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="profitPercent">Желаемый процент профита</label>
+                            <input class="settings" type="number" id="profitPercent">
+                        </div>
+                        <div class="sett-row">
+                            <label for="stickersOverPricePercent">Процент наценки за стикеры</label>
+                            <input class="settings" type="number" id="stickersOverPricePercent">
+                        </div>
+                        <div class="sett-row">
+                            <label for="floatOverPricePercent">Процент наценки за флоат</label>
+                            <input class="settings" type="number" id="floatOverPricePercent">
+                        </div>
+                        <div class="sett-row">
+                            <label for="numberOfLots">Количество лотов для анализа</label>
+                            <input class="settings" type="number" id="numberOfLots">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="checkDefaultSkins">Проверять скины без наклеек</label>
+                            <input class="settings" type="checkbox" id="checkDefaultSkins">
+                        </div>
+                        <div class="sett-row">
+                            <label for="checkFloat">Проверять флоат</label>
+                            <input class="settings" type="checkbox" id="checkFloat">
+                        </div>
+                        <div class="sett-row">
+                            <label for="checkWearStickers">Игнорировать потертые наклейки</label>
+                            <input class="settings" type="checkbox" id="checkWearStickers">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="numberOfPotok">Количество потоков</label>
+                            <input class="settings" type="number" id="numberOfPotok">
+                        </div>
+                        <div class="sett-row">
+                            <label for="loop">Зациклить</label>
+                            <input class="settings" type="checkbox" id="loop">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="autoBuy">Автопокупка</label>
+                            <input class="settings" type="checkbox" id="autoBuy">
+                        </div>
+                        <div class="sett-row">
+                            <label for="autoSell">Автопродажа</label>
+                            <input class="settings" type="checkbox" id="autoSell">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="telegram_chat_id">Идентификатор чата Телеграмм</label>
+                            <input class="settings" type="number" name="telegram_chat_id" id="telegram_chat_id">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="cntLog">Количество строк в логе</label>
+                            <input class="settings" type="number" name="cntLog" id="cntLog">
+                        </div>
+                    </div>
+                    <div class="col-auto setting-item">
+                        <div class="sett-row">
+                            <label for="stickersFilter_ignore">Игнорировать наклейки</label>
+                            <input class="settings" type="checkbox" id="stickersFilter_ignore">
+                        </div>
+                        <div class="sett-row">
+                            <button id="openStickersFilter">Открыть список наклеек</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <button id="startWork">Начать работу</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <label for="useProxy">Использовать прокси</label>
-    <input class="settings" type="checkbox" id="useProxy">
-    <button id="clearProxy">Выключить прокси</button>
-    <button id="openProxyList">Открыть список прокси</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="title">Расчет цен</div>
-    <label for="countSalesHour">Минимум продаж в час </label>
-    <input class="settings" type="number" id="countSalesHour">
-</div>
-<div class="row">
-    <label for="countDayHistoryGraph">Период анализа</label>
-    <input class="settings" type="number" id="countDayHistoryGraph">
-</div>
-<div class="row">
-    <label for="percentLimit">Процент коридора </label>
-    <input class="settings" type="number" id="percentLimit">
-</div>
-<div class="row" style="flex-wrap: wrap;">
-    <label for="algoritm">Алгоритм</label>
-    <select class="settings" size="1" id="algoritm">
-        <option value="HG">Максимальный</option>
-        <option value="HSG">Макс безопасный</option>
-        <option value="AVG">Средний</option>
-        <option value="LG">Низкий</option>
-    </select>
-</div>
-</div><br>
-<br>
-<br>
-<br>
-<div>
-    <label for="profitPercent">Желаемый процент профита</label>
-    <input class="settings" type="number" id="profitPercent">
-</div>
-<div>
-    <label for="stickersOverPricePercent">Процент наценки за стикеры</label>
-    <input class="settings" type="number" id="stickersOverPricePercent">
-</div>
-<div>
-    <label for="floatOverPricePercent">Процент наценки за флоат</label>
-    <input class="settings" type="number" id="floatOverPricePercent">
-</div>
-<div>
-    <label for="numberOfLots">Количество лотов для анализа</label>
-    <input class="settings" type="number" id="numberOfLots">
+        </section>
+        <section id="main" class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <button id="startWork">On</button>
+                </div>
+                <div class="col-auto">
+                    <button id="enterSecrteKey">Ввести ключ</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <div id="currentProxy"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id="progress_bars"></div>
+                </div>
+            </div>
+            <div class="log_find_wrapper">
+                <div id="log_find" class="logs overflow"></div>
+            </div>
+            <div class="log-wrapper">
+                <div class="log-control">
+                    Log
+                <div class="hide-log">-</div>
+                </div>
+                <div id="log" class="logs overflow"></div>
+            </div>
+            <div class="row" id="settings">
+                <div class="col">
+                    <button id="import">Импорт предметов</button>
+                    <button id="deleteItems">Удалить выделенные</button>
+                    <button id="calc">Пересчитать цены Предметов</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="tableDIV"></div>
+                </div>
+            </div>
+        </section>
     </div>
-        <br>
-    <br>
-    <br>
-    <br>
-<div>
-    <label for="checkDefaultSkins">Проверять скины без наклеек</label>
-    <input class="settings" type="checkbox" id="checkDefaultSkins">
-</div>
-<div>
-    <label for="checkFloat">Проверять флоат</label>
-    <input class="settings" type="checkbox" id="checkFloat">
-</div>
-<div>    
-    <label for="checkWearStickers">Игнорировать потертые наклейки</label>
-    <input class="settings" type="checkbox" id="checkWearStickers">
-</div>
-    <br>
-    <br>
-    <br>
-    <br>  
-<div>
-    <label for="numberOfPotok">Количество потоков</label>
-    <input class="settings" type="number" id="numberOfPotok">
-    <label for="loop">Зациклить</label>
-    <input class="settings" type="checkbox" id="loop">
-    <br>
-    <br>
-    <br>
-    <br>    
-    <label for="autoBuy">Автопокупка</label>
-    <input class="settings" type="checkbox" id="autoBuy">
-    <label for="autoSell">Автопродажа</label>
-    <input class="settings" type="checkbox" id="autoSell">
-</div>
-    <br>
-    <br>
-    <br>
-    <br>
-<h4>Telegram </h4>
-<div class="">
-    <label for="telegram_chat_id">Идентификатор чата Телеграмм</label>
-    <input class="settings" type="number" name="telegram_chat_id" id="telegram_chat_id">
-</div>
-<div>
-    <div>
-        <div id="currentProxy"></div>
-        <br>
-        <div id="progress_bars"></div>
-        <div>
-            <button id="import">Импорт предметов</button>
-            <button id="deleteItems">Удалить выделенные</button>
-            <button id="calc">Пересчитать цены Предметов</button>
-        </div>
-        <div id="log_find" class="logs overflow"></div>
-        <div id="log" class="logs overflow"></div>
-        <div id="tableDIV"></div>
 </body>
