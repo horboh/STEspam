@@ -9,8 +9,6 @@
     <script type="text/javascript" src="scr/jquery.js"></script>
     <script src="scr/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="background.js"></script>
-    <script type="text/javascript" src="zae.js"></script>
     <title>spam</title>
 </head>
 <body>
@@ -22,6 +20,9 @@
                 </div>
                 <a class="logo col">
                     <img src="/ico/ste_white.png" alt="">STEspam
+                
+                
+                
                 </a>
                 <div class="user_block col">
                     <div class="user_avatar" id="user_avatar"></div>
@@ -66,13 +67,17 @@
                             <div class="b-popup-settings">
                                 <div class="set_group">
                                     <div class="title">Список наклеек</div>
-                                    <div class="row">
+                                    <div hidden class="row">
                                         <textarea name="srickersList" id="srickersList" cols="100" rows="10"></textarea>
                                     </div>
                                     <div>
                                         <button id="srickersList_close" class="">Закрыть</button>
                                         <button id="srickersList_clear" class="">Очистить</button>
                                     </div>
+                                    <div>
+                                        <button id="srickersList_add" class="">Добавить</button>
+                                    </div>
+                                    <div id="srickersList1"></div>
                                 </div>
                             </div>
                         </div>
@@ -177,8 +182,10 @@
                     </div>
                     <div class="col-auto setting-item">
                         <div class="sett-row">
-                            <label for="stickersFilter_ignore">Игнорировать наклейки</label>
+                            <label for="stickersFilter_ignore">Игнор</label>
                             <input class="settings" type="checkbox" id="stickersFilter_ignore">
+                            <label for="stickersFilter_priority">Приоритет</label>
+                            <input class="settings" type="checkbox" id="stickersFilter_priority">
                         </div>
                         <div class="sett-row">
                             <button id="openStickersFilter">Открыть список наклеек</button>
