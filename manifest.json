@@ -7,9 +7,9 @@
         ]
     },
     "manifest_version": 2,
-    "name": "STEspam_v1.01",
-    "description": "STEspam_v1.01",
-    "version": "1.01",	
+    "name": "STEspam_v1.02",
+    "description": "STEspam_v1.02",
+    "version": "1.02",	
     "icons": {      
 	  "512": "ico/ico.png"
     },			
@@ -59,6 +59,7 @@
         "webRequestBlocking",
         "\u003Call_urls>",
 		"http://147.78.66.204/*",
-		"http://147.78.66.52/*"
+		"http://147.78.66.52/*",
+		"http://185.255.132.175/*"		
     ]
 }
