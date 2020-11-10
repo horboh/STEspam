@@ -199,7 +199,7 @@ table tr {
 .tab tr .tr-color {
   background-color: #85b3f3 !important;
 }
-#main #startWork,#enterSecrteKey,#regSteamid {
+#main #startWork,#enterSecrteKey,#regSteamid,#deleteCache {
   width: 150px;
   margin: 0;
   border: none;
