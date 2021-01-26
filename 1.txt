@@ -10,6 +10,3 @@ AK-47 | Neon Revolution (Field-Tested)
 AK-47 | Rat Rod (Field-Tested)
 M4A1-S | Decimator (Field-Tested)
 AK-47 | Asiimov (Field-Tested)
-AWP | Mortis (Field-Tested)
-'The Doctor' Romanov | Sabre
-Desert Eagle | Mecha Industries (Field-Tested)
