@@ -7,9 +7,9 @@
         ]
     },
     "manifest_version": 2,
-    "name": "STEspam_v1.04",
-    "description": "STEspam_v1.04",
-    "version": "1.04",	
+    "name": "STEspam_v1.06",
+    "description": "STEspam_v1.06",
+    "version": "1.06",	
     "icons": {      
 	  "512": "ico/ico.png"
     },			
