@@ -8,8 +8,8 @@
     },
     "manifest_version": 2,
     "name": "STEspam_v1.07",
-    "description": "STEspam_v1.07",
-    "version": "1.07",	
+    "description": "STEspam_v1.08",
+    "version": "1.08",	
     "icons": {      
 	  "512": "ico/ico.png"
     },			
@@ -43,12 +43,10 @@
     },
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "permissions": [
-        "http://steamcommunity.com/*",
-        "http://*.steamcommunity.com/*",
-        "https://steamcommunity.com/*",
-        "https://*.steamcommunity.com/*",		
-		"http://localhost:3000/*",
-		"https://api.csgofloat.com/*",
+        "https://*.steamcommunity.com/*",
+        "https://api.csgofloat.com/*",
+        "http://*.localhost/*",
+        "http://*.stetrade.ru/*",
         "notifications",
         "cookies",
         "tabs",
@@ -57,9 +55,6 @@
         "proxy",
         "webRequest",
         "webRequestBlocking",
-        "\u003Call_urls>",
-		"http://147.78.66.204/*",
-		"http://147.78.66.52/*",
-		"http://185.255.132.175/*"		
-    ]
+        "\u003Call_urls>"
+		]
 }
